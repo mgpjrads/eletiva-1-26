@@ -22,9 +22,9 @@
             if($_SERVER['REQUEST_METHOD'] == "POST"){
                 $valor1 = $_POST['valor1'];
 
-                $pi = 3.14;
+                $pi = 3.14159;
                 $calc = $pi * ($valor1 ** 2);
-                echo "Área do circulo: $calc cm";
+                echo "Área do circulo: $calc cm²";
             }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
