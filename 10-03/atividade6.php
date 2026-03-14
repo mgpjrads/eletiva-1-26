@@ -12,7 +12,7 @@
 <form method="post">
 <div class="mb-3">
               <label for="valor1" class="form-label">Digite um número com parte decimal:</label>
-              <input type="number" id="valor1" name="valor1" class="form-control" required="">
+              <input type="number" id="valor1" name="valor1" class="form-control" required="" step="0.01">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
@@ -21,6 +21,16 @@
     {
         $num = $_POST['valor1'];
         
+        echo "Número Informado: $num";
+        echo "<p></p>";
+        echo "Número arredondado para cima: ";
+        echo ceil($num);
+        echo "<p></p>";
+        echo "Número arredondado para baixo: ";
+        echo floor($num);
+        echo "<p></p>";
+        echo "Número arredondado normalmente: ";
+        echo round($num);
     }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
