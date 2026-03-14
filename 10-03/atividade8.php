@@ -22,6 +22,16 @@
             if($_SERVER['REQUEST_METHOD'] == "POST")
             {
                 $palavra = $_POST['valor1'];
+
+                function ContarVogais($string)
+                {
+                    preg_match_all('/[aeiouáéíóúâêîôûãõàèìòùäëïöü]/i', $string, $matches);
+                    return count($matches[0]);
+                }
+
+                echo "Palavra/Frase: $palavra";
+                
+                echo "<p>Total de vogais: ". ContarVogais($palavra). "</p>";
                 
             }
         ?>
