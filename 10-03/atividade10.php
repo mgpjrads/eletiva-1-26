@@ -11,7 +11,7 @@
 <h1>Atividade 10</h1>
 <form method="post">
 <div class="mb-3">
-              <label for="valor1" class="form-label">Digite um nome:</label>
+              <label for="valor1" class="form-label">Digite um nome completo:</label>
               <input type="text" id="valor1" name="valor1" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -20,6 +20,17 @@
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         $nome = $_POST['valor1'];
+
+        $nome_fatiado = explode(" ", $nome);
+
+        $iniciais = '';
+
+        for ($i = 0; $i < count($nome_fatiado); $i++)
+            {
+                $iniciais .=strtoupper(($nome_fatiado[$i][0]).".");
+            }
+
+            echo "Iniciais: $iniciais";
         
     }
 ?>
