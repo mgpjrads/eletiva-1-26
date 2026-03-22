@@ -58,7 +58,7 @@
     <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") 
     {
-      $contato = $_POST['nome'];
+      $contatos = $_POST['nome'];
       $numeros = $_POST['num'];
 
       $mapa = [];
@@ -86,8 +86,9 @@
         $mapa[$nome] = $telefone;
       }
 
-      if ($erro = false) {
-        ksort($mapa);
+      if ($erro == false) 
+      {
+          ksort($mapa);
       }
 
       echo "<h2> Lista ordenada de Contatos </h2>";
