@@ -39,24 +39,42 @@
                 $preco = $_POST['preco'];
 
                 $mapa = [];
-                $mapaa = [];
+                
 
                 for ($i = 0; $i < 5; $i ++)
                 {
                     $mapa[$codigo[$i]] = $produto[$i];
                     if ($preco[$i] > 100)
                     {
-                        $preco[$i] = ($preco[$i] - ($preco[$i] * (20/100)));
+                        $preco[$i] = ($preco[$i] - ($preco[$i] * (10/100)));
                         $mapaa[$produto[$i]] = $preco[$i];
                     }
-                    else
-                        $mapaa[$produto[$i]] = $preco[$i];
+                    
+                    $mapa[$codigo[$i]] = ["nome" => $produto[$i], "preco" => $preco[$i]];
 
                 }
                 
+                $nomes = [];
+
+                foreach ($mapa as $chave => $valor)
+                {
+                    $nomes[$chave] = $valor["nome"];
+                }
+
+                asort($nomes);
+
+                $mapaordenado = [];
+
+                foreach ($nomes as $chave => $valor)
+                {
+                    $mapaordenado[$chave] = $mapa[$chave];
+                }
+
+                $mapa = $mapaordenado;
+
                 foreach ($mapa as $chave => $valor) 
                 {
-                    echo "<p>Código: $chave - Produto:$valor - Preço: R$ " . number_format($mapaa[$valor], 2, ',', '.') . "</p>";
+                    echo "<p>Código:". $chave. "- Produto:".$valor['nome']. "- Preço: R$ " . number_format($valor['preco'], 2, ',', '.') . "</p>";
                     
                 }
             }
