@@ -22,12 +22,22 @@
             if ($_SERVER['REQUEST_METHOD'] == "POST")
                 {
                     $num = $_POST['valor1'];
-
-                    for ($i = 1; $i < $num; $i++)
+                    if ($num >= 1)
+                    {
+                        for ($i = 1; $i < $num; $i++)
                         {
                             echo "$i, ";
                         }
                             echo "$i";
+                    }
+                    else
+                    {
+                        for ($i = 1; $i > $num; $i--)
+                        {
+                            echo "$i, ";
+                        }
+                            echo "$i";
+                    }
                 }           
 
         ?>
