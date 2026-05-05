@@ -52,7 +52,7 @@
     ?>
 
     <p class="text-center mt-3">
-      Já tem conta? <a href="login.html">Entrar</a>
+      Já tem conta? <a href="index.php">Entrar</a>
     </p>
   </div>
 </div>
