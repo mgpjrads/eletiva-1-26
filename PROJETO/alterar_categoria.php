@@ -1,6 +1,22 @@
 <?php
     require_once('cabecalho.php');
     require_once('conexao.php');
+    $mensagem = '';
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $nome = $_POST['descricao'];
+        $id = $_GET['id'];
+        try{
+        $sql = "UPDATE categorias SET nome = ? WHERE id = ?";
+        $stmt = $pdo->prepare($sql);
+        if($stmt->execute([$nome, $id])){
+            $mensagem = "<p> Alteração realizada! </p>";
+        }else{
+            $mensagem = "<p> Erro ao Alterar! Tente novamente </p>";
+        }
+        } catch (Exception $e) {
+            echo "Erro: ". $e->getMessage();
+        }
+    }
     try{
         $stmt = $pdo->prepare("SELECT * FROM categorias where id = ?");
         $stmt->execute([$_GET['id']]);
@@ -19,22 +35,7 @@
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
     <?php
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
-            require_once('conexao.php');
-            $nome = $_POST['descricao'];
-            $id = $_GET['id'];
-            try{
-            $sql = "UPDATE categorias SET nome = ? WHERE id = ?";
-            $stmt = $pdo->prepare($sql);
-            if($stmt->execute([$nome, $id])){
-                echo "<p> Alteração realizada! </p>";
-            }else{
-                echo "<p> Erro ao Alterar! Tente novamente </p>";
-            }
-            } catch (Exception $e) {
-                echo "Erro: ". $e->getMessage();
-            }
-        }
+        echo $mensagem;
 
     ?>
 
