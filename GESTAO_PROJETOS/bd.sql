@@ -83,6 +83,18 @@ CREATE TABLE IF NOT EXISTS `gestao_projetos`.`atividades` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `gestao_projetos`.`usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gestao_projetos`.`usuarios` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `senha` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
