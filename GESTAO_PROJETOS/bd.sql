@@ -61,9 +61,9 @@ CREATE TABLE IF NOT EXISTS `gestao_projetos`.`atividades` (
   `membros_id` INT NOT NULL,
   `data_comeco` DATE NOT NULL,
   `data_termino` DATE NOT NULL,
-  INDEX `fk_atividades_projetos_idx` (`projetos_id` ASC) VISIBLE,
-  INDEX `fk_atividades_tarefas1_idx` (`tarefas_id` ASC) VISIBLE,
-  INDEX `fk_atividades_membros1_idx` (`membros_id` ASC) VISIBLE,
+  INDEX `fk_atividades_projetos_idx` (`projetos_id` ASC),
+  INDEX `fk_atividades_tarefas1_idx` (`tarefas_id` ASC),
+  INDEX `fk_atividades_membros1_idx` (`membros_id` ASC),
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_atividades_projetos`
     FOREIGN KEY (`projetos_id`)
