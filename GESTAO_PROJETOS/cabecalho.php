@@ -35,8 +35,11 @@
     Funções Básicas
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdown2">
-    <li><a class="dropdown-item" href="categorias.php">Categorias</a></li>
-<li><a class="dropdown-item" href="produtos.php">Produtos</a></li>
+    <li><a class="dropdown-item" href="projetos.php">Projetos</a></li>
+    <li><a class="dropdown-item" href="membros.php">Membros</a></li>
+    <li><a class="dropdown-item" href="tarefas.php">Tarefas</a></li>
+    <li><a class="dropdown-item" href="atividades.php">Atividades</a></li>
+
   </ul>
 </li>
 
