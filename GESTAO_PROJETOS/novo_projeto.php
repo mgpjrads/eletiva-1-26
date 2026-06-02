@@ -26,7 +26,13 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+            <a href="projetos.php" class="btn btn-secondary">
+                 Voltar
+            </a>
+</div>
     </form>
     <?php
       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
