@@ -3,7 +3,7 @@
     require_once('conexao.php');
     $mensagem = "";
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $nome = $_POST['descricao'];
+        $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
         $data_inicio = $_POST['data_inicio'];
         $data_fim = $_POST['data_fim'];
@@ -34,7 +34,7 @@
 
 <h1>Alterar Projeto</h1>
     <form method="post" 
-        action="editar_categoria.php?id=<?= $resultado['id']?>">
+        action="editar_projeto.php?id=<?= $resultado['id']?>">
 
         <div class="mb-3">
             <label for="nome" class="form-label">Nome do Projeto</label>
