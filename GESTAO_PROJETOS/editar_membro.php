@@ -41,7 +41,7 @@
 
         <div class="mb-3">
             <label for="email" class="form-label">email</label>
-            <input id="email" name="email" class="form-control" required="" value="<?= $resultado['email'] ?>">    </input>
+            <input id="email" name="email" class="form-control" required="" value="<?= $resultado['email'] ?>"> 
         </div>
 
         <div class="mb-3">
