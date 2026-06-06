@@ -51,10 +51,10 @@
     <li><a class="dropdown-item" href="relatorio_atividade_status.php">Relatório de Atividades por Status</a></li>
     <li><a class="dropdown-item" href="relatorio_atividade_responsavel.php">Relatório de Atividades por Responsável</a></li>
     <li><a class="dropdown-item" href="relatorio_carga.php">Relatório de Carga de Trabalho</a></li>
-    <li><a class="dropdown-item" href="#">Relatório de Atividades por Projeto</a></li>
-    <li><a class="dropdown-item" href="#">Relatório de Atividades Atrasadas</a></li>
-    <li><a class="dropdown-item" href="#">Relatório Geral do Projeto</a></li>
-    <li><a class="dropdown-item" href="#">Relatório por Período</a></li>
+    <li><a class="dropdown-item" href="relatorio_atividades_projeto.php">Relatório de Atividades por Projeto</a></li>
+    <li><a class="dropdown-item" href="relatorio_atividade_atrasada.php">Relatório de Atividades Atrasadas</a></li>
+    <li><a class="dropdown-item" href="relatorio_geral_projeto.php">Relatório Geral do Projeto</a></li>
+    <li><a class="dropdown-item" href="relatorio_periodo.php">Relatório por Período(atividade)</a></li>
   </ul>
 </li>
 
