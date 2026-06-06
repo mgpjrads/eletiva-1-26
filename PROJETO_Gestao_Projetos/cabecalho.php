@@ -48,7 +48,12 @@
     Funções de Saída
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdown3">
-    <li><a class="dropdown-item" href="#">Relatório de Produtos</a></li>
+    <li><a class="dropdown-item" href="#">Relatório de Atividades por Status</a></li>
+    <li><a class="dropdown-item" href="#">Relatório de Carga de Trabalho e de Atividades por Responsável</a></li>
+    <li><a class="dropdown-item" href="#">Relatório de Atividades por Projeto</a></li>
+    <li><a class="dropdown-item" href="#">Relatório de Atividades Atrasadas</a></li>
+    <li><a class="dropdown-item" href="#"></a>Relatório Geral do Projeto</li>
+    <li><a class="dropdown-item" href="#"></a>Relatório por Período</li>
   </ul>
 </li>
 
