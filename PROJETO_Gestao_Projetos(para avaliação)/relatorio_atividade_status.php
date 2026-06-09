@@ -27,7 +27,7 @@
 
 <table class="table table-hover table-striped">
 
-```
+
 <thead>
 
     <tr>
@@ -52,18 +52,18 @@
     <?php endforeach; ?>
 
 </tbody>
-```
+
 
 </table>
 
 <div class="d-flex gap-2">
 
-```
+
 <a href="atividades.php"
    class="btn btn-secondary">
     Voltar
 </a>
-```
+
 
 </div>
 

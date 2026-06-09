@@ -61,7 +61,7 @@ $membros = $pdo->query("SELECT * FROM membros")->fetchAll();
 <form method="post"
       action="editar_atividade.php?id=<?= $resultado['id'] ?>">
 
-```
+
 <!-- Projeto -->
 <div class="mb-3">
     <label class="form-label">Projeto</label>
@@ -177,7 +177,7 @@ $membros = $pdo->query("SELECT * FROM membros")->fetchAll();
     </a>
 
 </div>
-```
+
 
 </form>
 

@@ -67,9 +67,9 @@ try{
         <td><?= $r['responsavel'] ?></td>
 
         <td>
-            <?= $r['data_comeco'] ?>
+            <?= date('d/m/Y', strtotime($r['data_comeco'])) ?>
             até
-            <?= $r['data_termino'] ?>
+            <?= date('d/m/Y', strtotime($r['data_termino'])) ?>
         </td>
 
         <td><?= $r['status'] ?></td>

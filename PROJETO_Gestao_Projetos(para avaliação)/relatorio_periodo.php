@@ -67,7 +67,7 @@
 
 <form method="post">
 
-```
+
 <div class="mb-3">
 
     <label for="data_inicial"
@@ -113,13 +113,13 @@
     </a>
 
 </div>
-```
+
 
 </form>
 
 <?php if(!empty($resultado)): ?>
 
-```
+
 <hr>
 
 <h2>Resultado</h2>
@@ -153,9 +153,9 @@
 
             <td><?= $r['responsavel'] ?></td>
 
-            <td><?= $r['data_comeco'] ?></td>
+            <td><?= date('d/m/Y', strtotime($r['data_comeco'])) ?></td>
 
-            <td><?= $r['data_termino'] ?></td>
+            <td><?= date('d/m/Y', strtotime($r['data_termino'])) ?></td>
 
             <td><?= $r['status'] ?></td>
 
@@ -166,7 +166,7 @@
     </tbody>
 
 </table>
-```
+
 
 <?php endif; ?>
 
