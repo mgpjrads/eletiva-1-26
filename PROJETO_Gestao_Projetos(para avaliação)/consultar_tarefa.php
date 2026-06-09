@@ -11,9 +11,9 @@
     }
 ?>
 
-<h1>Consultar Membro</h1>
+<h1>Consultar Tarefa</h1>
     <form method="post" 
-        action="consultar_membro.php?id=<?= $resultado['id'] ?>">
+        action="consultar_tarefa.php?id=<?= $resultado['id'] ?>">
 
         <div class="mb-3">
             <p><strong>Titulo:</strong> <?= $resultado['titulo'] ?></p>
@@ -30,7 +30,7 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $id = $_GET['id'];
             try{
-                $sql = "DELETE FROM membros WHERE id = ?";
+                $sql = "DELETE FROM tarefas WHERE id = ?";
                 $stmt = $pdo->prepare($sql);
                 if($stmt->execute([$id])){
                     header('Location: tarefas.php');
