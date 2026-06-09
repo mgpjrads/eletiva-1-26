@@ -27,8 +27,8 @@
             <td><?= $r['id'] ?></td>
             <td><?= $r['nome'] ?></td>
             <td><?= $r['descricao'] ?></td>
-            <td><?= $r['data_inicio'] ?></td>
-            <td><?= $r['data_fim'] ?></td>
+            <td><?= date('d/m/Y', strtotime($r['data_inicio'])) ?></td>
+            <td><?= date('d/m/Y', strtotime($r['data_fim'])) ?></td>
             <td class="d-flex gap-2">
             <a href="editar_projeto.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
             <a href="consultar_projeto.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
